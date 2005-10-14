@@ -1,0 +1,9 @@
+Revision history for Perl extension Catalyst::Plugin::Session::Manager.
+
+0.02_01  Thu Oct 15 01:01:53 2005
+	- cpan release (alpha version)
+
+0.01  Thu Oct 13 20:01:53 2005
+	- original version; created by h2xs 1.23 with options
+		-X -A Catalyst::Plugin::Session::Manager
+
