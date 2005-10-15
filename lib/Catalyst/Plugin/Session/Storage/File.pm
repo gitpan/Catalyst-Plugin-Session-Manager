@@ -62,6 +62,61 @@ sub cleanup {
 }
 
 sub _mtime { (stat(shift))[9] }
+
 1;
 __END__
+
+=head1 NAME
+
+Catalyst::Plugin::Session::Storage::File - stores session-data with file
+
+=head1 SYNOPSIS
+
+    use Catalyst qw/Session::Manager/;
+
+    MyApp->config->{session} = {
+        storage     => 'File',
+        storage_dir => '/tmp',
+        file_prefix => 'MyApp-Session',
+        expires     => 3600,
+    };
+
+=head1 DESCRIPTION
+
+This module allows you to handle session with file.
+
+=head1 CONFIGURATION
+
+=over 4
+
+=item storage_dir
+
+'/tmp' is set by default.
+
+=item file_prefix
+
+'Catalyst-Session' is set by default.
+
+=item expires
+
+3600 is set by default.
+
+=back
+
+=head1 SEE ALSO
+
+L<Catalyst>
+
+L<Catalyst::Plugin::Session::Manager>
+
+=head1 AUTHOR
+
+Lyo Kato E<lt>lyo.kato@gmail.comE<gt>
+
+=head1 COPYRIGHT AND LICENSE
+
+This library is free software; you can redistribute it and/or modify
+it under the same terms as Perl itself.
+
+=cut
 

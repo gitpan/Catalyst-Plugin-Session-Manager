@@ -9,7 +9,7 @@ use UNIVERSAL::require;
 use Digest::MD5;
 use Catalyst::Exception;
 
-our $VERSION = '0.02_01';
+our $VERSION = '0.03';
 
 __PACKAGE__->mk_classdata( '_session'        );
 __PACKAGE__->mk_classdata( '_session_client' );
@@ -91,11 +91,12 @@ Catalyst::Plugin::Session::Manager - session manager for Catalyst
     MyApp->config->{session} = {
         storage => 'FastMmap',
         client  => 'Cookie',
+        ...other configuration needed by storage and client class.
     }
 
 =head1 DESCRIPTION
 
-This module provides session handlers for separated two process,
+This module provides session handlers for separated two processes,
 one is to store data on server-side, another is on client-side.
 
 Set manager on server-side with 'storage' parameter in configuration.
@@ -109,7 +110,15 @@ If you don't set them, 'FastMmap' and 'Cookie' are set by default.
 
 =item FastMmap
 
+See L<Catalyst::Plugin::Session::Storage::FastMmap>
+
 =item File
+
+See L<Catalyst::Plugin::Session::Storage::File>
+
+=item CDBI
+
+See L<Catalyst::Plugin::Session::Storage::CDBI>
 
 =back
 
@@ -119,17 +128,21 @@ If you don't set them, 'FastMmap' and 'Cookie' are set by default.
 
 =item Cookie
 
+See L<Catalyst::Plugin::Session::Client::Cookie>
+
 =item StickyQuery
 
+See L<Catalyst::Plugin::Session::Client::StickyQuery>
+
 =item Rewrite
+
+See L<Catalyst::Plugin::Session::Client::Rewrite>
 
 =back
 
 =head1 TODO
 
 =over 4
-
-=item creating Storage::CDBI
 
 =item more documentation
 

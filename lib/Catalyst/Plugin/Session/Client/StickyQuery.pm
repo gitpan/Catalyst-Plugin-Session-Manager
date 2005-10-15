@@ -33,3 +33,52 @@ sub sessionid_name {
 
 1;
 __END__
+
+=head1 NAME
+
+Catalyst::Plugin::Session::Client::StickyQuery - handles sessionid with sticky query.
+
+=head1 SYNOPSIS
+
+    use Catalyst qw/Session::Manager/;
+
+    MyApp->config->{session} = {
+        client => 'StickyQuery',
+        name   => 'SESSIONID',
+    };
+
+=head1 DESCRIPTION
+
+This module allows you to handle sessionid with sticky query.
+This is useful in case you can't use cookie, for example, your project is for mobile-phone or like that,
+which has browser doesn't apply cookie.
+
+=head1 CONFIGURATION
+
+=over 4
+
+=item name
+
+'SESSIONID' is set by default.
+
+=back
+
+=head1 SEE ALSO
+
+L<Catalyst>
+
+L<Catalyst::Plugin::Session::Manager>
+
+L<HTML::StickyQuery>
+
+=head1 AUTHOR
+
+Lyo Kato E<lt>lyo.katp@gmail.comE<gt>
+
+=head1 COPYRIGHT AND LICENSE
+
+This library is free software; you can redistribute it and/or modify
+it under the same terms as Perl itself.
+
+=cut
+

@@ -1,5 +1,8 @@
 Revision history for Perl extension Catalyst::Plugin::Session::Manager.
 
+0.03  Thu Oct 15 19:00:00 2005
+	- added Storage::CDBI, and documentation
+
 0.02_01  Thu Oct 15 01:01:53 2005
 	- cpan release (alpha version)
 

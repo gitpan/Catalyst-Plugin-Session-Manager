@@ -1,7 +1,7 @@
 # http://module-build.sourceforge.net/META-spec.html
 #XXXXXXX This is a prototype!!!  It will change in the future!!! XXXXX#
 name:         Catalyst-Plugin-Session-Manager
-version:      0.02_01
+version:      0.03
 version_from: lib/Catalyst/Plugin/Session/Manager.pm
 installdirs:  site
 requires:
@@ -9,6 +9,7 @@ requires:
     Catalyst:                      5.3
     Class::Accessor:               0
     IO::File:                      0
+    MIME::Base64:                  0
     NEXT:                          0
     Storable:                      0
     UNIVERSAL::require:            0
