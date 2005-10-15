@@ -1,8 +1,8 @@
-package Catalyst::Plugin::Session::Storage::File;
+package Catalyst::Plugin::Session::Manager::Storage::File;
 use strict;
 use warnings;
 
-use base qw/Catalyst::Plugin::Session::Storage/;
+use base qw/Catalyst::Plugin::Session::Manager::Storage/;
 
 use Catalyst::Exception;
 use File::Spec;
@@ -68,7 +68,7 @@ __END__
 
 =head1 NAME
 
-Catalyst::Plugin::Session::Storage::File - stores session-data with file
+Catalyst::Plugin::Session::Manager::Storage::File - stores session-data with file
 
 =head1 SYNOPSIS
 

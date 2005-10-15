@@ -9,7 +9,7 @@ use UNIVERSAL::require;
 use Digest::MD5;
 use Catalyst::Exception;
 
-our $VERSION = '0.03';
+our $VERSION = '0.04';
 
 __PACKAGE__->mk_classdata( '_session'        );
 __PACKAGE__->mk_classdata( '_session_client' );
@@ -55,8 +55,8 @@ sub setup {
     my $config  = $self->config->{session};
     my $storage = delete $config->{ storage } || 'FastMmap';
     my $client  = delete $config->{ client  } || 'Cookie';
-    $storage = 'Catalyst::Plugin::Session::Storage::'.$storage;
-    $client  = 'Catalyst::Plugin::Session::Client::'.$client;
+    $storage = 'Catalyst::Plugin::Session::Manager::Storage::'.$storage;
+    $client  = 'Catalyst::Plugin::Session::Manager::Client::'.$client;
 
     $storage->require;
     if ($@) {
@@ -110,15 +110,15 @@ If you don't set them, 'FastMmap' and 'Cookie' are set by default.
 
 =item FastMmap
 
-See L<Catalyst::Plugin::Session::Storage::FastMmap>
+See L<Catalyst::Plugin::Session::Manager::Storage::FastMmap>
 
 =item File
 
-See L<Catalyst::Plugin::Session::Storage::File>
+See L<Catalyst::Plugin::Session::Manager::Storage::File>
 
 =item CDBI
 
-See L<Catalyst::Plugin::Session::Storage::CDBI>
+See L<Catalyst::Plugin::Session::Manager::Storage::CDBI>
 
 =back
 
@@ -128,15 +128,15 @@ See L<Catalyst::Plugin::Session::Storage::CDBI>
 
 =item Cookie
 
-See L<Catalyst::Plugin::Session::Client::Cookie>
+See L<Catalyst::Plugin::Session::Manager::Client::Cookie>
 
 =item StickyQuery
 
-See L<Catalyst::Plugin::Session::Client::StickyQuery>
+See L<Catalyst::Plugin::Session::Manager::Client::StickyQuery>
 
 =item Rewrite
 
-See L<Catalyst::Plugin::Session::Client::Rewrite>
+See L<Catalyst::Plugin::Session::Manager::Client::Rewrite>
 
 =back
 

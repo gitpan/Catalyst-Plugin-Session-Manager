@@ -1,4 +1,4 @@
-package Catalyst::Plugin::Session::Storage;
+package Catalyst::Plugin::Session::Manager::Storage;
 use strict;
 use warnings;
 

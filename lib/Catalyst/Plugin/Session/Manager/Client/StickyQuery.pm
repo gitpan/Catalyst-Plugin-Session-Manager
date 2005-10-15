@@ -1,7 +1,7 @@
-package Catalyst::Plugin::Session::Client::StickyQuery;
+package Catalyst::Plugin::Session::Manager::Client::StickyQuery;
 use strict;
 use warnings;
-use base qw/Catalyst::Plugin::Session::Client/;
+use base qw/Catalyst::Plugin::Session::Manager::Client/;
 
 use HTML::StickyQuery;
 
@@ -36,7 +36,7 @@ __END__
 
 =head1 NAME
 
-Catalyst::Plugin::Session::Client::StickyQuery - handles sessionid with sticky query.
+Catalyst::Plugin::Session::Manager::Client::StickyQuery - handles sessionid with sticky query.
 
 =head1 SYNOPSIS
 

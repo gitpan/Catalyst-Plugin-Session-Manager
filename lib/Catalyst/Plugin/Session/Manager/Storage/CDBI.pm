@@ -1,7 +1,7 @@
-package Catalyst::Plugin::Session::Storage::CDBI;
+package Catalyst::Plugin::Session::Manager::Storage::CDBI;
 use strict;
 use warnings;
-use base qw/Catalyst::Plugin::Session::Storage/;
+use base qw/Catalyst::Plugin::Session::Manager::Storage/;
 
 use UNIVERSAL::require;
 use Catalyst::Exception;
@@ -83,7 +83,7 @@ __END__
 
 =head1 NAME
 
-Catalyst::Plugin::Session::Storage::CDBI - stores session data with CDBI
+Catalyst::Plugin::Session::Manager::Storage::CDBI - stores session data with CDBI
 
 =head1 SYNOPSIS
 

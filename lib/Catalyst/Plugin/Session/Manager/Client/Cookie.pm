@@ -1,7 +1,7 @@
-package Catalyst::Plugin::Session::Client::Cookie;
+package Catalyst::Plugin::Session::Manager::Client::Cookie;
 use strict;
 use warnings;
-use base qw/Catalyst::Plugin::Session::Client/;
+use base qw/Catalyst::Plugin::Session::Manager::Client/;
 
 our $EXPIRES = 60 * 60;
 
@@ -37,7 +37,7 @@ __END__
 
 =head1 NAME
 
-Catalyst::Plugin::Session::Client::Cookie - stores session id with cookie
+Catalyst::Plugin::Session::Manager::Client::Cookie - stores session id with cookie
 
 =head1 SYNOPSIS
 

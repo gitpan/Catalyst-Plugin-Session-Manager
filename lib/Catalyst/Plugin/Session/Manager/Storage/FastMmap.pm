@@ -1,7 +1,7 @@
-package Catalyst::Plugin::Session::Storage::FastMmap;
+package Catalyst::Plugin::Session::Manager::Storage::FastMmap;
 use strict;
 use warnings;
-use base qw/Catalyst::Plugin::Session::Storage/;
+use base qw/Catalyst::Plugin::Session::Manager::Storage/;
 use Cache::FastMmap;
 
 our $SHARE_FILE = "/tmp/session";
@@ -34,7 +34,7 @@ __END__
 
 =head1 NAME
 
-Catalyst::Plugin::Session::Storage::FastMmap - stores session data with Cache::FastMmap 
+Catalyst::Plugin::Session::Manager::Storage::FastMmap - stores session data with Cache::FastMmap 
 
 =head1 SYNOPSIS
 

@@ -1,4 +1,4 @@
-package Catalyst::Plugin::Session::Client;
+package Catalyst::Plugin::Session::Manager::Client;
 use strict;
 use warnings;
 

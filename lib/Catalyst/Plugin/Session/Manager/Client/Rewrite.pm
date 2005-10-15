@@ -1,8 +1,8 @@
-package Catalyst::Plugin::Session::Client::Rewrite;
+package Catalyst::Plugin::Session::Manager::Client::Rewrite;
 use strict;
 use warnings;
 
-use base qw/Catalyst::Plugin::Session::Client/;
+use base qw/Catalyst::Plugin::Session::Manager::Client/;
 
 use URI::Find;
 
@@ -50,7 +50,7 @@ __END__
 
 =head1 NAME
 
-Catalyst::Plugin::Session::Client::Rewrite - handle sessonid with rewriting URL
+Catalyst::Plugin::Session::Manager::Client::Rewrite - handle sessonid with rewriting URL
 
 =head1 SYNOPSIS
 
