@@ -1,6 +1,11 @@
 Revision history for Perl extension Catalyst::Plugin::Session::Manager.
 
-0.03  Thu Oct 15 18:00:00 2005
+0.05  Tue Nov  1 21:00:00 2005
+	- fixed bug: StickyQuery didn't work well on Catalyst 5.3X and before.
+      Now it's OK on both 5.3 and 5.5
+      (Thanks to Hideo Kimura)
+
+0.04  Thu Oct 15 18:00:00 2005
 	- fixed name space
 
 0.03  Thu Oct 15 19:00:00 2005

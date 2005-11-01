@@ -9,7 +9,7 @@ use UNIVERSAL::require;
 use Digest::MD5;
 use Catalyst::Exception;
 
-our $VERSION = '0.04';
+our $VERSION = '0.05';
 
 __PACKAGE__->mk_classdata( '_session'        );
 __PACKAGE__->mk_classdata( '_session_client' );
@@ -22,13 +22,14 @@ sub finalize {
     return $c->NEXT::finalize(@_);
 }
 
-sub prepare_action {
-    my $c = shift;
-    if ( my $sid = $c->_session_client->get($c) ) {
-        $c->sessionid($sid);
-        $c->log->debug(qq/Found sessionid "$sid"/) if $c->debug;
-    }
-    $c->NEXT::prepare_action(@_);
+sub prepare_parameters {
+   my $c = shift;
+   $c->NEXT::prepare_parameters;
+   if ( my $sid = $c->_session_client->get($c) ) {
+       $c->sessionid($sid);
+       $c->log->debug(qq/Found sessionid "$sid"/) if $c->debug;
+   }
+   return $c;
 }
 
 sub session {
