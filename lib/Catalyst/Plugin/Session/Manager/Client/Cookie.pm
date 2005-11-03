@@ -60,6 +60,10 @@ This module allows you to store session id in your browser's cookie.
 
 3600 is set by default.
 
+=item domain
+
+Override the domain for the cookie
+
 =back
 
 =head1 SEE ALSO

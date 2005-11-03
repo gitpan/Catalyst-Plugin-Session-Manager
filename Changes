@@ -1,5 +1,10 @@
 Revision history for Perl extension Catalyst::Plugin::Session::Manager.
 
+0.06  Thu Nov  3 16:00:00 2005
+    - Now it's available to override the domain for the cookie.
+      (Thanks to Jason Woodward)
+      
+
 0.05  Tue Nov  1 21:00:00 2005
 	- fixed bug: StickyQuery didn't work well on Catalyst 5.3X and before.
       Now it's OK on both 5.3 and 5.5

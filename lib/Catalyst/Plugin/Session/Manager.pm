@@ -9,7 +9,7 @@ use UNIVERSAL::require;
 use Digest::MD5;
 use Catalyst::Exception;
 
-our $VERSION = '0.05';
+our $VERSION = '0.06';
 
 __PACKAGE__->mk_classdata( '_session'        );
 __PACKAGE__->mk_classdata( '_session_client' );
