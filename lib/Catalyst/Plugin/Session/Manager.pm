@@ -9,7 +9,7 @@ use UNIVERSAL::require;
 use Digest::MD5;
 use Catalyst::Exception;
 
-our $VERSION = '0.06';
+our $VERSION = '0.07';
 
 __PACKAGE__->mk_classdata( '_session'        );
 __PACKAGE__->mk_classdata( '_session_client' );
@@ -83,7 +83,7 @@ __END__
 
 =head1 NAME
 
-Catalyst::Plugin::Session::Manager - session manager for Catalyst
+Catalyst::Plugin::Session::Manager - session manager for Catalyst (deprecated on 5.5)
 
 =head1 SYNOPSIS
 
@@ -94,6 +94,12 @@ Catalyst::Plugin::Session::Manager - session manager for Catalyst
         client  => 'Cookie',
         ...other configuration needed by storage and client class.
     }
+
+=head1 ATTENTION
+
+If you use Catalyst 5.5 or later, You should use L<Catalyst::Plugin::Session>.
+
+I keep this on CPAN just for people still need Catalyst version 5.3.
 
 =head1 DESCRIPTION
 
